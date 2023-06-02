@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6UCQ7PcQJRRvqJ68d3AbmRcymMEZyCKsWLDX/FwYocm2zlr0ywcHsp1XESoJPX50NFXJIfo+rzUuhdekqMYg1w==",
+  "success": true,
+  "projectFilePath": "D:\\PRN221\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\baolo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
