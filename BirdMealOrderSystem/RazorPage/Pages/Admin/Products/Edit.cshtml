@@ -17,7 +17,7 @@
             <input type="hidden" asp-for="Product.ProductId" />
             <input type="hidden"  asp-for="Product.ImageLink"/>
 
-            <img src="~/@Model.Product.ImageLink" height="200" width="200"/>
+            <img src="~/uploads/@Model.Product.ImageLink" height="200" width="200"/>
             <div class="form-group">
                 <label for="imageFile">Select an image to change:</label>
                 <input type="file" class="form-control-file" id="imageFile" name="file">

@@ -23,7 +23,7 @@
         @foreach (var item in Model.cart)
         {
             <tr align="center">
-                <td><img src="" width="120" height="100" /></td>
+                <td><img src="~/uploads/@item.ImageLink" width="120" height="100"/></td>
                 <td align="center">
                     <a asp-page="create" asp-page-handler="delete" asp-route-id="@item.ProductId">X</a>
                 </td>
