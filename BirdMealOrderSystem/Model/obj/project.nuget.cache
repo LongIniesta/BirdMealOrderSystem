@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N17Zs3xMQ5COLjeWphXENfbzs+oSvzifCb8wbBHU/d0Yp5TAI042KmrWo3h6k8ef5FnRSbSQQT+DXf/+C2J7gg==",
+  "dgSpecHash": "0TjHFSxThcq7GUL63PwvRGMA16lt507DAE0f7VkPbWIuShb+tXSicqU85f3kDdKQJJw/YMqtgauWexkIaE2Diw==",
   "success": true,
-  "projectFilePath": "D:\\PRN221\\BirdMealOrderSystem\\Model\\Model.csproj",
+  "projectFilePath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Model\\Model.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

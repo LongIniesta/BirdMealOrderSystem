@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BussinessObject;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using System;
+using Microsoft.Extensions.Configuration;
+using Repository;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,16 +12,73 @@ namespace RazorPage.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
+        public class LoginDTO
         {
-            _logger = logger;
+
+            [Required(ErrorMessage = "PLease enter your phone")]
+            [Display(Name = "Phone number")]
+            [Phone]
+            public string phone { get; set; }
+            [Required(ErrorMessage = "Please fill your password")]
+            [Display(Name = "Password")]
+            public string password { get; set; }
         }
 
-        public void OnGet()
-        {
+        [BindProperty]
+        public LoginDTO LoginDTOInfor { get; set; }
+        public string Message { get; set; }
+        private readonly IConfiguration Configuration;
 
+        IUserRepository UserRepository = new UserRepository();
+
+
+        public IndexModel(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IActionResult OnGet()
+        {
+            if (SessionHelper.checkPermission(HttpContext.Session, "admin"))
+            {
+                return Redirect("Admin/Users/Index");
+            }
+            else return Page();
+        }
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (LoginDTOInfor == null) return Page();
+
+            if (LoginDTOInfor.phone.Equals(Configuration["AdminAccount:Phone"]) &&
+                LoginDTOInfor.password.Equals(Configuration["AdminAccount:Password"]))
+            {
+                SessionHelper.SetObjectAsJson(HttpContext.Session, "role", "admin");
+                return RedirectToPage("Admin/Users/Index");
+            }
+            else
+            {
+                List<User> list = UserRepository.GetAll().ToList();
+                User user = null;
+                user = list.SingleOrDefault(p => p.PhoneNumber.Equals(LoginDTOInfor.phone) && p.Password.Equals(LoginDTOInfor.password));
+                if (user != null)
+                {
+                    SessionHelper.SetObjectAsJson(HttpContext.Session, "role", user.Role);
+                    SessionHelper.SetObjectAsJson(HttpContext.Session, "cusId", user.UserId);
+                    Message = user.Role;
+                    return Page();
+                }
+                else
+                {
+                    Message = "Password or account is incorrect!";
+                    return Page();
+                }
+            }
+
+        }
+        public IActionResult OnPostLogout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToPage("Index");
         }
     }
 }

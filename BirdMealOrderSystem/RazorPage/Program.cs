@@ -22,5 +22,6 @@ namespace RazorPage
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+        //new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetConnectionString("MyConnectionString")
     }
 }

@@ -1,6 +1,8 @@
+using Firebase.Storage;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +26,20 @@ namespace RazorPage
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+           services.AddSession();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+            });
+
+            services.AddControllersWithViews()
+   .AddNewtonsoftJson(options =>
+   options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
+            /*services.AddSingleton<FirebaseStorage>(provider =>
+            {
+                var firebaseStorage = new FirebaseStorage("<your-storage-bucket>", );
+                return firebaseStorage;
+            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +60,7 @@ namespace RazorPage
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthorization();
 
