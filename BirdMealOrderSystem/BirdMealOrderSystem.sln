@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPage", "RazorPage\RazorPage.csproj", "{F0EAE435-6A2A-4B4D-8005-A3A6EFB2305F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{9C3A4E7C-9A90-4BDB-B75D-40409BC8F336}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{9C3A4E7C-9A90-4BDB-B75D-40409BC8F336}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -41,9 +41,13 @@ namespace RazorPage.Pages
         {
             if (SessionHelper.checkPermission(HttpContext.Session, "admin"))
             {
-                return Redirect("Admin/Users/Index");
+                return RedirectToPage("Admin/Users/Index");
             }
-            else return Page();
+            if (SessionHelper.checkPermission(HttpContext.Session, "staff"))
+            {
+                return RedirectToPage("Staff/Products/Index");
+            }
+            return Page();
         }
         public async Task<IActionResult> OnPostAsync()
         {
@@ -60,11 +64,14 @@ namespace RazorPage.Pages
                 List<User> list = UserRepository.GetAll().ToList();
                 User user = null;
                 user = list.SingleOrDefault(p => p.PhoneNumber.Equals(LoginDTOInfor.phone) && p.Password.Equals(LoginDTOInfor.password));
-                if (user != null)
+                if (user != null && user.Status == true)
                 {
                     SessionHelper.SetObjectAsJson(HttpContext.Session, "role", user.Role);
                     SessionHelper.SetObjectAsJson(HttpContext.Session, "cusId", user.UserId);
-                    Message = user.Role;
+                    if (user.Role.Equals("staff"))
+                    {
+                        return RedirectToPage("Staff/Products/Index");
+                    }
                     return Page();
                 }
                 else
