@@ -47,7 +47,7 @@
     <tbody>
 @foreach (var item in Model.Product) {
         <tr>
-                <td><img src="@item.ImageLink" width="120" height="100" /></td>
+                <td><img src="~/uploads/@item.ImageLink" width="120" height="100" /></td>
             <td>
                 @Html.DisplayFor(modelItem => item.ProductName)
             </td>

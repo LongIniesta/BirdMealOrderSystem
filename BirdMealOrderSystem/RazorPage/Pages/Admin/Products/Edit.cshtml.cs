@@ -83,7 +83,7 @@ namespace RazorPage.Pages.Admin.Products
                 }
 
 
-                Product.ImageLink = "../uploads" + "/" + uniqueFileName;
+                Product.ImageLink = uniqueFileName;
             }
 
             try
