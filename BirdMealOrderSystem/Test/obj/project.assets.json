@@ -8,23 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\baolo\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Test\\Test.csproj",
-      "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Test\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Test\\Test.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\baolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

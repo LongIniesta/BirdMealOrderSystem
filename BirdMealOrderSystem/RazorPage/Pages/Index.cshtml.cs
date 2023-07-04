@@ -39,6 +39,7 @@ namespace RazorPage.Pages
 
         public IActionResult OnGet()
         {
+            LoginDTOInfor = new LoginDTO();
             if (SessionHelper.checkPermission(HttpContext.Session, "admin"))
             {
                 return Redirect("Admin/Users/Index");

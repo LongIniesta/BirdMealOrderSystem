@@ -10,3 +10,15 @@ D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.d
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\Model\obj\Debug\net5.0\refint\Model.dll
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.pdb
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\Model\obj\Debug\net5.0\ref\Model.dll
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\bin\Debug\net5.0\Model.deps.json
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\bin\Debug\net5.0\Model.dll
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\bin\Debug\net5.0\Model.pdb
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.dll
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\refint\Model.dll
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\Model.pdb
+C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\Model\obj\Debug\net5.0\ref\Model.dll
