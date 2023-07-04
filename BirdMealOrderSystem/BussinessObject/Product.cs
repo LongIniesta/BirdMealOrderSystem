@@ -26,7 +26,6 @@ namespace BussinessObject
         [Required(ErrorMessage = "Unit price is required!")]
         public decimal UnitPrice { get; set; }
 
-        [Required(ErrorMessage = "Image is required!")]
         public string ImageLink { get; set; }
 
         [Required(ErrorMessage = "Description is required!")]

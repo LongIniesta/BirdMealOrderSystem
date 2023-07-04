@@ -17,6 +17,7 @@ namespace BussinessObject
         public string ComboName { get; set; }
         public decimal Price { get; set; }
         public int Ratingavg { get; set; }
+        [DiscountValid]
         public double Discount { get; set; }
         public string ComboDescription { get; set; }
         public bool ComboStatus { get; set; }
