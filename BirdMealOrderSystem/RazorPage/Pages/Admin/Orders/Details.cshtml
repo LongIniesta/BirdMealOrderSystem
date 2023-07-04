@@ -1,0 +1,107 @@
+﻿@page
+@model RazorPage.Pages.Admin.Orders.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "LayoutAdmin";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.Total)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.Total)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.OrderStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.OrderStatus)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.OrdeDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.OrdeDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.ShippedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.ShippedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.ShipAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.ShipAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.Paymentmethod)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.Paymentmethod)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.PaymentStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.PaymentStatus)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.User)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.User.Address)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Order.OrderId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@if(Model.orderComboDetails != null && Model.orderComboDetails.Count > 0){
+    <div>
+        @foreach (var item in Model.orderComboDetails)
+        {
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Combo @item.Combo.ComboName
+                </dt>
+                <dd class="col-sm-10">
+                    Quantity: @item.Quantity
+                </dd>
+                <dd class="col-sm-10">
+                    Price: @item.UnitPrice
+                </dd>
+            </dl>
+        }
+    </div>
+}
+@if (Model.orderProductDetails != null && Model.orderProductDetails.Count > 0)
+{
+    <div>
+        @foreach (var item in Model.orderProductDetails)
+        {
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Combo @item.Product.ProductName
+                </dt>
+                <dd class="col-sm-10">
+                    Quantity: @item.Quantity
+                </dd>
+                <dd class="col-sm-10">
+                    Price: @item.UnitPrice
+                </dd>
+            </dl>
+        }
+    </div>
+}
+

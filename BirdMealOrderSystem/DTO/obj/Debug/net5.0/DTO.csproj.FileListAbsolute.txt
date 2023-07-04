@@ -1,0 +1,12 @@
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\bin\Debug\net5.0\DTO.deps.json
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\bin\Debug\net5.0\DTO.dll
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\bin\Debug\net5.0\DTO.pdb
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\DTO.csproj.AssemblyReference.cache
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\DTO.AssemblyInfoInputs.cache
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\DTO.AssemblyInfo.cs
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\DTO.csproj.CoreCompileInputs.cache
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\DTO.dll
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\refint\DTO.dll
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\DTO.pdb
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\DTO\obj\Debug\net5.0\ref\DTO.dll

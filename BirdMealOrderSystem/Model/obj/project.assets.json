@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN221\\BirdMealOrderSystem\\Model\\Model.csproj",
+      "projectUniqueName": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "D:\\PRN221\\BirdMealOrderSystem\\Model\\Model.csproj",
+      "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN221\\BirdMealOrderSystem\\Model\\obj\\",
+      "outputPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
