@@ -79,7 +79,7 @@
                     Quantity: @item.Quantity
                 </dd>
                 <dd class="col-sm-10">
-                    Price: @item.UnitPrice
+                    Unit price after discounted: @( ((double) item.UnitPrice)-  ((double)item.UnitPrice*item.Discount/100))
                 </dd>
             </dl>
         }
@@ -98,7 +98,7 @@
                     Quantity: @item.Quantity
                 </dd>
                 <dd class="col-sm-10">
-                    Price: @item.UnitPrice
+                    Unit price after discounted: @(((double)item.UnitPrice) - ((double)item.UnitPrice * item.Discount / 100))
                 </dd>
             </dl>
         }

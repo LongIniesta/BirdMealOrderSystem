@@ -112,6 +112,10 @@ namespace RazorPage.Pages.Admin.Combos
         }
         public IActionResult OnPostSubmit()
         {
+            cart = SessionHelper.GetObjectFromJson<List<ComboDetailDTO>>(HttpContext.Session, "cart");
+            if (cart != null && cart.Count > 0)
+                Total = (decimal)cart.Sum(i => ((double)i.UnitPrice) * i.Quantity - ((double)i.UnitPrice) * i.Quantity * (i.ProductDiscount / 100));
+            SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
             if (!SessionHelper.checkPermission(HttpContext.Session, "admin"))
             {
                 return Redirect("~/ErrorRole");
@@ -126,7 +130,7 @@ namespace RazorPage.Pages.Admin.Combos
                 return Page();
             }
 
-            for (var i = 0; i < cart.Count; i++)
+            /*for (var i = 0; i < cart.Count; i++)
             {
                 Product product = productRepository.GetAll().SingleOrDefault(f => f.ProductId == cart[i].ProductId);
                 if (product.UnitInStock < cart[i].Quantity)
@@ -138,6 +142,18 @@ namespace RazorPage.Pages.Admin.Combos
                     SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
                     return Page();
                 }
+            }*/
+
+            if (Total < Combo.Price)
+            {
+                double a  = (double) Total;
+                double b = (double) Combo.Price; 
+                Message = "Combo price must be less than total of component!";
+                cart = SessionHelper.GetObjectFromJson<List<ComboDetailDTO>>(HttpContext.Session, "cart");
+                if (cart != null && cart.Count > 0)
+                    Total = (decimal)cart.Sum(i => ((double)i.UnitPrice) * i.Quantity - ((double)i.UnitPrice) * i.Quantity * (i.ProductDiscount / 100));
+                SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
+                return Page();
             }
 
             comboRepository.Create(Combo);
@@ -148,9 +164,9 @@ namespace RazorPage.Pages.Admin.Combos
                 cbd.ProductId = cart[i].ProductId;
                 cbd.Quantity = cart[i].Quantity;
                 cbd.ComboId = comboID;
-                Product product = productRepository.GetById(cart[i].ProductId);
+                /*Product product = productRepository.GetById(cart[i].ProductId);
                 product.UnitInStock = product.UnitInStock - cbd.Quantity;
-                productRepository.Update(product);
+                productRepository.Update(product);*/
                 comboDetailRepository.Create(cbd);
             }
 

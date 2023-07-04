@@ -88,8 +88,8 @@ namespace RazorPage.Pages.Admin.Products
                 }
 
                 return RedirectToPage("./Index");
-            }
-            Message = "Upload Image Error!";
+            } 
+            Message = "Image is required!";
             ViewData["SupplierId"] = new SelectList(supplierRepository.GetAll(), "SupplierId", "SupplierName");
             listCategory = categoryDetailRepository.GetAll();
             return Page();

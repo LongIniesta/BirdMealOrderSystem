@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BussinessObject;
 using Repository;
+using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace RazorPage.Pages.Admin.Combos
 {
@@ -17,6 +18,8 @@ namespace RazorPage.Pages.Admin.Combos
         IComboDetailRepository comboDetailRepository = new ComboDetailRepository();
         [BindProperty]
         public Combo Combo { get; set; }
+        public double Total { get; set; }
+        public string Message { get; set; }
         public List<ComboDetail> ComboDetails { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -27,6 +30,7 @@ namespace RazorPage.Pages.Admin.Combos
             }
 
             Combo = comboRepository.GetById((int) id);
+            Total = 0;
             ComboDetails = new List<ComboDetail>();
             foreach (ComboDetail cbd in Combo.ComboDetails.ToList())
             {
@@ -34,6 +38,7 @@ namespace RazorPage.Pages.Admin.Combos
                 if (cbd1 != null)
                 {
                     ComboDetails.Add(cbd1);
+                    Total += cbd1.Quantity * ((double)cbd1.Product.UnitPrice) -  cbd1.Quantity * ((double)cbd1.Product.UnitPrice) * (cbd1.Product.ProductDiscount / 100);
                 }
             }
 
@@ -48,17 +53,49 @@ namespace RazorPage.Pages.Admin.Combos
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            Combo.ComboDetails = comboRepository.GetById((int)Combo.ComboId).ComboDetails;
+            ComboDetails = new List<ComboDetail>();
+            Total = 0;
+            foreach (ComboDetail cbd in Combo.ComboDetails.ToList())
+            {
+                ComboDetail cbd1 = comboDetailRepository.GetAll().Where(c => c.ProductId == cbd.ProductId && c.ComboId == Combo.ComboId).SingleOrDefault();
+                if (cbd1 != null)
+                {
+                    Total += cbd1.Quantity * ((double)cbd1.Product.UnitPrice)-cbd1.Quantity * ((double)cbd1.Product.UnitPrice) * (cbd1.Product.ProductDiscount / 100);
+                    ComboDetails.Add(cbd1);
+                }
+            }
             if (!ModelState.IsValid)
             {
                 ComboDetails = new List<ComboDetail>();
+                Total = 0;
                 foreach (ComboDetail cbd in Combo.ComboDetails.ToList())
                 {
                     ComboDetail cbd1 = comboDetailRepository.GetAll().Where(c => c.ProductId == cbd.ProductId && c.ComboId == Combo.ComboId).SingleOrDefault();
                     if (cbd1 != null)
                     {
+                        Total += cbd1.Quantity * ((double)cbd1.Product.UnitPrice)-cbd1.Quantity * ((double)cbd1.Product.UnitPrice) * (cbd1.Product.ProductDiscount / 100);
                         ComboDetails.Add(cbd1);
                     }
                 }
+                return Page();
+            }
+            if (Total < (double)Combo.Price)
+            {
+                double a = Total;
+                double b = (double) Combo.Price;
+                ComboDetails = new List<ComboDetail>();
+                Total = 0;
+                foreach (ComboDetail cbd in Combo.ComboDetails.ToList())
+                {
+                    ComboDetail cbd1 = comboDetailRepository.GetAll().Where(c => c.ProductId == cbd.ProductId && c.ComboId == Combo.ComboId).SingleOrDefault();
+                    if (cbd1 != null)
+                    {
+                        Total += cbd1.Quantity * ((double)cbd1.Product.UnitPrice)- cbd1.Quantity * ((double)cbd1.Product.UnitPrice) * (cbd1.Product.ProductDiscount / 100);
+                        ComboDetails.Add(cbd1);
+                    }
+                }
+                Message = "Combo price must be less than total component price!";
                 return Page();
             }
 
