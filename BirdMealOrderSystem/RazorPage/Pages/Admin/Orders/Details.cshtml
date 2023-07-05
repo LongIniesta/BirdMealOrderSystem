@@ -6,9 +6,24 @@
     Layout = "LayoutAdmin";
 }
 
-<h1>Details</h1>
+<div class="d-flex justify-content-between">
+    <a asp-page="./Index">
+        <img src="~/images/back-icon-3.png" style="padding-left: 30px;" />
+    </a>
+    <div>
+    </div>
+    <div>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <span class="mx-2 span-custom"><a style="font-weight: 500; color: #5A5A5A; text-decoration: none;" asp-page="./Index">Orders</a></span>
+    <span> / </span>
+    <span class="mx-2" style="font-weight: 500; color: #000;">Details</span>
+</div>
+<h1 class="text-center mt-5 mb-5">DETAILS</h1>
 
-<div>
+
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin: 0 200px 0 200px;">
     <h4>Order</h4>
     <hr />
     <dl class="row">
@@ -61,10 +76,7 @@
             @Html.DisplayFor(model => model.Order.User.Address)
         </dd>
     </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Order.OrderId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Order.OrderId">Edit</a> 
 </div>
 
 @if(Model.orderComboDetails != null && Model.orderComboDetails.Count > 0){
