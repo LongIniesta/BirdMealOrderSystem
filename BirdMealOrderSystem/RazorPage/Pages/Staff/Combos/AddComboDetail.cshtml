@@ -1,0 +1,32 @@
+﻿@page
+@model RazorPage.Pages.Staff.Combos.AddComboDetailModel
+@{
+    Layout = "LayoutStaff";
+}
+<h3>Product List</h3>
+<table border="1">
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Max Quantity</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Description</th>
+        <th>Supllier</th>
+    </tr>
+    @foreach (var product in Model.Products)
+    {
+        <tr align="center">
+            <td><img src="~/uploads/@product.ImageLink" width="120" height="100" /></td>
+            <td>@product.ProductName</td>
+            <td>@product.UnitInStock</td>
+            <td>@product.UnitPrice</td>
+            <td>@product.ProductDiscount (%)</td>
+            <td>@product.ProductDescription</td>
+            <td>@product.Supplier.SupplierName</td>
+            <td>
+                <a asp-page="./Create" asp-page-handler="BuyNow" asp-route-id="@product.ProductId">Add to combo</a>
+            </td>
+        </tr>
+    }
+</table>

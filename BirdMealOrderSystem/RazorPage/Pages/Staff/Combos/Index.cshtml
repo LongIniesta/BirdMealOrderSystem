@@ -1,0 +1,68 @@
+﻿@page
+@model RazorPage.Pages.Staff.Combos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "LayoutStaff";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Combo[0].ComboName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Combo[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Combo[0].Ratingavg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Combo[0].Discount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Combo[0].ComboDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Combo[0].ComboStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Combo)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComboName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ratingavg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComboDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComboStatus)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ComboId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ComboId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ComboId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -19,6 +20,9 @@ namespace BussinessObject
         public string OrderStatus { get; set; }
         public DateTime OrdeDate { get; set; }
         public DateTime? ShippedDate { get; set; }
+
+        [Required(ErrorMessage = "ship address is required!")]
+        [StringLength(200, MinimumLength = 1, ErrorMessage = "The length of ship address is from 1 to 200 charater")]
         public string ShipAddress { get; set; }
         public string Paymentmethod { get; set; }
         public string PaymentStatus { get; set; }
