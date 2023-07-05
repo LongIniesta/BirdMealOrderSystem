@@ -72,6 +72,7 @@ namespace RazorPage.Pages
         }
         public void OnPost()
         {
+
             if (ModelState.IsValid)
                 Register();
         }
