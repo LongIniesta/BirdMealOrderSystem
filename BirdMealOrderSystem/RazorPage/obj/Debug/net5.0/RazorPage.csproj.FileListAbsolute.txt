@@ -192,9 +192,8 @@ D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Raz
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Staff\Combos\Details.cshtml.g.cs
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Staff\Combos\Edit.cshtml.g.cs
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Staff\Combos\Index.cshtml.g.cs
-D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Staff\Orders\Create.cshtml.g.cs
-D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Staff\Orders\Delete.cshtml.g.cs
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Staff\Orders\Details.cshtml.g.cs
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Staff\Orders\Edit.cshtml.g.cs
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Staff\Orders\Index.cshtml.g.cs
 D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\Shared\LayoutStaff.cshtml.g.cs
+D:\PRN221\PRN221_GroupProject\BirdMealOrderSystem\RazorPage\obj\Debug\net5.0\Razor\Pages\ShoppingProduct.cshtml.g.cs

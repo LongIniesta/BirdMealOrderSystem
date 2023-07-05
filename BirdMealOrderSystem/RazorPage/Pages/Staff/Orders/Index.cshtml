@@ -19,14 +19,7 @@
         <input asp-for="orderEnd" class="form-control" />
         <span asp-validation-for="orderStart" class="text-danger"></span>
     </div>
-    <div>
-        <label>Number of order:</label>
-        <h4>@Model.numberOfOrder</h4>
-        <lable>Total:</lable>
-        <h4>@Model.Total</h4>
-
-    </div>
-    <div><button class="btn-outline-primary" type="submit">Generate</button></div>
+    <div><button class="btn-outline-primary" type="submit">Search</button></div>
     <div><span class="text-danger">@Model.Message</span></div>
 </form>
 <table class="table">
@@ -88,7 +81,7 @@
                     @Html.DisplayFor(modelItem => item.User.UserName)
                 </td>
                 <td>
-                    <a asp-page="./Details" asp-route-id="@item.OrderId">Details</a>
+                    <a asp-page="./Details" asp-route-id="@item.OrderId">View order detail</a>
                 </td>
             </tr>
         }
