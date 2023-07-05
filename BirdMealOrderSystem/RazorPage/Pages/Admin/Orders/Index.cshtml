@@ -6,31 +6,36 @@
     Layout = "LayoutAdmin";
 }
 
-<h1>Report</h1>
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin: 0 200px 0 200px;">
+    <h1 class="text-center">Report</h1>
 
-<form method="post" asp-page-handler="generate">
-    <div class="form-group">
-        <label class="control-label">Order date from</label>
-        <input asp-for="orderStart" class="form-control" />
-        <span asp-validation-for="orderStart" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label class="control-label">To</label>
-        <input asp-for="orderEnd" class="form-control" />
-        <span asp-validation-for="orderStart" class="text-danger"></span>
-    </div>
-    <div>
-        <label>Number of order:</label>
-        <h4>@Model.numberOfOrder</h4>
-        <lable>Total:</lable>
-        <h4>@Model.Total</h4>
+    <form method="post" asp-page-handler="generate">
+        <div class="form-group">
+            <label class="control-label">Order date from</label>
+            <input asp-for="orderStart" class="form-control" />
+            <span asp-validation-for="orderStart" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">To</label>
+            <input asp-for="orderEnd" class="form-control" />
+            <span asp-validation-for="orderStart" class="text-danger"></span>
+        </div>
+        <div class="">
+            <label>Number of order:</label>
+            <h4>@Model.numberOfOrder</h4>
+            <lable>Total:</lable>
+            <h4>@Model.Total</h4>
 
-    </div>
-    <div><button class="btn-outline-primary" type="submit">Generate</button></div>
-    <div><span class="text-danger">@Model.Message</span></div>
-</form>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="btn-primary rounded-pill px-4 py-2" asp-page="Generate"><a asp-page="Generate" style="color: #fff; text-decoration: none; font-weight: 600;">Generate</a></button>
+        </div>
+
+        <div><span class="text-danger">@Model.Message</span></div>
+    </form>
+</div>
 <table class="table">
-    <thead>
+    <thead class="table-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Order[0].Total)
@@ -69,7 +74,11 @@
                 @Html.DisplayFor(modelItem => item.OrderStatus)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.OrdeDate)
+                    @{
+                        DateTime orderDate = (DateTime)item.OrdeDate;
+                        string formatDate = orderDate.ToString("dd/MM/yyyy");
+                    }
+                    <span>@formatDate</span>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ShippedDate)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n+EVh/TdwJpZmLoia8qq/hr5q/u+6qRDwXIrfCAqDI3p6TLa5VWInTBKSlE0JuBDgKt0Li1XtU3n8Ws2uA8NWw==",
+  "dgSpecHash": "Sb4KNc8O94KGRqYVl1ZYHkrIhN9dzRYoYs+NAmiw2SbgRvRvYZlkjTF+fvZTxVv98yJZPVmPvxZpeyNtKd+AiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj",
+  "projectFilePath": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
