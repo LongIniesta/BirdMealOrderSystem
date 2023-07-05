@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "22DZrItPj0gzTAMI+c61gXO26j/b3ui4RrRNm1Tip5OR3FTkk1SHUaq/5ZnQzTA7eNEd6Z7uXJNpFf+m8NqN2A==",
+  "dgSpecHash": "U5cczo/uS58kcx2KIEirgnMpFsskcn7lEwT1j9qnWDSRKNfeULeFVe+MfvG5iaVQ9mT8bWkmwokP0bGRWYq4mw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

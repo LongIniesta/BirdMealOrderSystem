@@ -28,3 +28,18 @@ C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\Bi
 C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.pdb
 C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.genruntimeconfig.cache
 C:\Users\Admin\OneDrive\Máy tính\CN7 Summer 2023\PRN221\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\ref\BussinessObject.dll
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\bin\Debug\net5.0\BussinessObject.deps.json
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\bin\Debug\net5.0\BussinessObject.runtimeconfig.json
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\bin\Debug\net5.0\BussinessObject.runtimeconfig.dev.json
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\bin\Debug\net5.0\BussinessObject.dll
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\bin\Debug\net5.0\BussinessObject.pdb
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.csproj.AssemblyReference.cache
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.GeneratedMSBuildEditorConfig.editorconfig
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.AssemblyInfoInputs.cache
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.AssemblyInfo.cs
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.csproj.CoreCompileInputs.cache
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.dll
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\refint\BussinessObject.dll
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.pdb
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\BussinessObject.genruntimeconfig.cache
+E:\Tailieu\Ki7\PRN221\group\BirdMealOrderSystem\BirdMealOrderSystem\BussinessObject\obj\Debug\net5.0\ref\BussinessObject.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WNPYLA2mwtRYg3wS/SYjUQfVWwf5V7leewKFwtLumAa2xhR04ozl2sOXIFg7q/sVgyLhVD1fcajVZnD8ypxRSg==",
+  "dgSpecHash": "Jj/FUV5N621McoNx9RzmjterBB7YR9e2ycR9lEIZ2C+6vJPLkzolMFWN0tPUncPVwxY8s0b1ymLPR/WCEW4iLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
+  "projectFilePath": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -170,8 +170,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
