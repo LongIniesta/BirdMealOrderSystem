@@ -24,6 +24,10 @@ namespace RazorPage.Pages.Admin.Combos
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            if (!SessionHelper.checkPermission(HttpContext.Session, "admin"))
+            {
+                return Redirect("~/ErrorRole");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -53,6 +57,10 @@ namespace RazorPage.Pages.Admin.Combos
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            if (!SessionHelper.checkPermission(HttpContext.Session, "admin"))
+            {
+                return Redirect("~/ErrorRole");
+            }
             Combo.ComboDetails = comboRepository.GetById((int)Combo.ComboId).ComboDetails;
             ComboDetails = new List<ComboDetail>();
             Total = 0;
