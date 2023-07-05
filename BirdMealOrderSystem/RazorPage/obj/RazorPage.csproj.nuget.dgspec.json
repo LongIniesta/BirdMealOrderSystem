@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj": {}
+    "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
+    "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj",
+        "projectUniqueName": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj",
         "projectName": "BussinessObject",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\obj\\",
+        "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj",
+        "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\baolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -85,24 +85,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj": {
+    "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DataAccess\\obj\\",
+        "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\baolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -117,8 +117,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
-                "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj"
+              "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
+                "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj"
               }
             }
           }
@@ -148,24 +148,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DTO\\DTO.csproj": {
+    "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DTO\\DTO.csproj",
+        "projectUniqueName": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DTO\\obj\\",
+        "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\baolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -207,24 +207,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj": {
+    "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
+        "projectUniqueName": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
         "projectName": "RazorPage",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\obj\\",
+        "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
+        "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\RazorPage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\baolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -239,14 +239,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
-                "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj"
+              "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
+                "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj"
               },
-              "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DTO\\DTO.csproj"
+              "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Repository\\Repository.csproj"
+              "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Repository\\Repository.csproj": {
+                "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Repository\\Repository.csproj"
               }
             }
           }
@@ -315,24 +315,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Repository\\Repository.csproj": {
+    "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Repository\\Repository.csproj",
+        "projectUniqueName": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\Repository\\obj\\",
+        "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\baolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -347,11 +347,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
-                "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj"
+              "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
+                "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj"
               },
-              "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\CN7 Summer 2023\\PRN221\\BirdMealOrderSystem\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj"
+              "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\PRN221\\PRN221_GroupProject\\BirdMealOrderSystem\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -381,7 +381,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
