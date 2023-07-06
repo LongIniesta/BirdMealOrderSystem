@@ -6,74 +6,92 @@
     ViewData["Title"] = "Details";
     Layout = "LayoutStaff";
 }
-<h1>Details</h1>
+<div class="d-flex justify-content-between">
+    <a asp-page="./Index">
+        <img src="~/images/back-icon-3.png" style="padding-left: 30px;" />
+    </a>
+    <div>
+    </div>
+    <div>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <span class="mx-2 span-custom"><a style="font-weight: 500; color: #5A5A5A; text-decoration: none;" asp-page="./Index">Combos</a></span>
+    <span> / </span>
+    <span class="mx-2" style="font-weight: 500; color: #000;">Details</span>
+</div>
+<h1 class="text-center mt-5 mb-5">DETAIL COMBO</h1>
+<hr />
 
-<div>
-    <h4>Combo</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin: 0 200px 0 200px;">
+    <dl class="row padding: 30px 30px 30px 30px;">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Combo.ComboName)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Combo.ComboName)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Combo.Price)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Combo.Price)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Combo.Ratingavg)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Combo.Ratingavg)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Combo.Discount)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Combo.Discount)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Combo.ComboDescription)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Combo.ComboDescription)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.Combo.ComboStatus)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-8">
             @Html.DisplayFor(model => model.Combo.ComboStatus)
         </dd>
     </dl>
 
 
-    <h3>Combo details:</h3>
-    <div>
-        @foreach (var item in Model.ComboDetails)
-        {
-            <dl class="row">
-                <dt class="col-sm-2">
-                    <img src="~/uploads/@item.Product.ImageLink" width="120" height="100" />
-                </dt>
-                <dt class="col-sm-2">
-                    @item.Product.ProductName
-                </dt>
-                <dd class="col-sm-10">
-                    @item.Quantity
-                </dd>
-            </dl>
-        }
+    
+</div>
+<hr />
+
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin: 0 20px 0 20px;">
+    <h3 class="text-center">Combo details:</h3>
+    @foreach (var item in Model.ComboDetails)
+    {
+        <dl class="row">
+            <dt class="col-sm-2">
+                <img src="~/uploads/@item.Product.ImageLink" width="120" height="100" />
+            </dt>
+            <dt class="col-sm-2">
+                @item.Product.ProductName
+            </dt>
+            <dd class="col-sm-10">
+                @item.Quantity
+            </dd>
+        </dl>
+    }
+    <div class="d-flex justify-content-center">
+        <button class="btn-primary rounded-pill px-4 py-2"><a asp-page="./Edit" asp-route-id="@Model.Combo.ComboId" style="color: #fff; text-decoration: none; font-weight: 600;">Edit</a></button>
     </div>
 </div>
+
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Combo.ComboId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
 </div>
-<div>
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin: 0 200px 0 200px;>
     @foreach (OrderComboDetail d in Model.orderComboDetails)
     {
         <h4>

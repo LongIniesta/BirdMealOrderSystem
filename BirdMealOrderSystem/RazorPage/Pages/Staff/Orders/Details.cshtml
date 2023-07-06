@@ -27,92 +27,98 @@
     <h4>Order</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Order.Total)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Order.Total)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Order.OrderStatus)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Order.OrderStatus)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Order.OrdeDate)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Order.OrdeDate)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Order.ShippedDate)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Order.ShippedDate)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Order.ShipAddress)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Order.ShipAddress)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Order.Paymentmethod)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Order.Paymentmethod)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Order.PaymentStatus)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Order.PaymentStatus)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Order.User)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Order.User.Address)
         </dd>
     </dl>
+    <div class="d-flex justify-content-center">
+        <button class="btn-primary rounded-pill px-4 py-2"><a asp-page="./Edit" asp-route-id="@Model.Order.OrderId" style="color: #fff; text-decoration: none; font-weight: 600;">Update Process</a></button>
+    </div>
 </div>
 
-@if (Model.orderComboDetails != null && Model.orderComboDetails.Count > 0)
-{
-    <div>
-        @foreach (var item in Model.orderComboDetails)
-        {
-            <dl class="row">
-                <dt class="col-sm-2">
-                    Combo @item.Combo.ComboName
-                </dt>
-                <dd class="col-sm-10">
-                    Quantity: @item.Quantity
-                </dd>
-                <dd class="col-sm-10">
-                    Unit price after discounted: @(((double)item.UnitPrice) - ((double)item.UnitPrice * item.Discount / 100))
-                </dd>
-            </dl>
-        }
-    </div>
-}
-@if (Model.orderProductDetails != null && Model.orderProductDetails.Count > 0)
-{
-    <div>
-        @foreach (var item in Model.orderProductDetails)
-        {
-            <dl class="row">
-                <dt class="col-sm-2">
-                    @item.Product.ProductName
-                </dt>
-                <dd class="col-sm-10">
-                    Quantity: @item.Quantity
-                </dd>
-                <dd class="col-sm-10">
-                    Unit price after discounted: @(((double)item.UnitPrice) - ((double)item.UnitPrice * item.Discount / 100))
-                </dd>
-            </dl>
-        }
-    </div>
-}
+<hr />
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin: 0 200px 0 200px;">
+    @if (Model.orderComboDetails != null && Model.orderComboDetails.Count > 0)
+    {
+        <div>
+            @foreach (var item in Model.orderComboDetails)
+            {
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        Combo @item.Combo.ComboName
+                    </dt>
+                    <dd class="col-sm-10">
+                        Quantity: @item.Quantity
+                    </dd>
+                    <dd class="col-sm-10">
+                        Unit price after discounted: @(((double)item.UnitPrice) - ((double)item.UnitPrice * item.Discount / 100))
+                    </dd>
+                </dl>
+            }
+        </div>
+    }
+    @if (Model.orderProductDetails != null && Model.orderProductDetails.Count > 0)
+    {
+        <div>
+            @foreach (var item in Model.orderProductDetails)
+            {
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @item.Product.ProductName
+                    </dt>
+                    <dd class="col-sm-10">
+                        Quantity: @item.Quantity
+                    </dd>
+                    <dd class="col-sm-10">
+                        Unit price after discounted: @(((double)item.UnitPrice) - ((double)item.UnitPrice * item.Discount / 100))
+                    </dd>
+                </dl>
+            }
+        </div>
+    }
+</div>

@@ -3,30 +3,52 @@
 @{
     Layout = "LayoutStaff";
 }
-<h3>Product List</h3>
-<table border="1">
-    <tr>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Max Quantity</th>
-        <th>Price</th>
-        <th>Discount</th>
-        <th>Description</th>
-        <th>Supllier</th>
-    </tr>
-    @foreach (var product in Model.Products)
-    {
-        <tr align="center">
-            <td><img src="~/uploads/@product.ImageLink" width="120" height="100" /></td>
-            <td>@product.ProductName</td>
-            <td>@product.UnitInStock</td>
-            <td>@product.UnitPrice</td>
-            <td>@product.ProductDiscount (%)</td>
-            <td>@product.ProductDescription</td>
-            <td>@product.Supplier.SupplierName</td>
-            <td>
-                <a asp-page="./Create" asp-page-handler="BuyNow" asp-route-id="@product.ProductId">Add to combo</a>
-            </td>
+<div class="d-flex justify-content-between">
+    <a asp-page="Index">
+        <img src="~/images/back-icon-3.png" style="padding-left: 30px;" />
+    </a>
+    <div>
+    </div>
+    <div>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <span class="mx-2 span-custom"><a style="font-weight: 500; color: #5A5A5A; text-decoration: none;" asp-page="Index">Combos</a></span>
+    <span> / </span>
+    <span class="mx-2" style="font-weight: 500; color: #000;">Add Combo Details</span>
+</div>
+<h1 class="text-center mt-5 mb-5">Product List</h1>
+
+<hr />
+
+<table class="table" border="1">
+    <thead class="table-dark">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Max Quantity</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Description</th>
+            <th>Supllier</th>
+            <th></th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr align="center">
+                <td><img src="~/uploads/@product.ImageLink" width="120" height="100" /></td>
+                <td>@product.ProductName</td>
+                <td>@product.UnitInStock</td>
+                <td>@product.UnitPrice</td>
+                <td>@product.ProductDiscount (%)</td>
+                <td>@product.ProductDescription</td>
+                <td>@product.Supplier.SupplierName</td>
+                <td>
+                    <a asp-page="./Create" asp-page-handler="BuyNow" asp-route-id="@product.ProductId">Add to combo</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
