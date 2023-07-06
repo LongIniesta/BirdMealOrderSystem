@@ -27,6 +27,7 @@ namespace RazorPage
         {
             services.AddRazorPages();
            services.AddSession();
+            
             services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(10);
             });

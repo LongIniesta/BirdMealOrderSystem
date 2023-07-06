@@ -76,10 +76,10 @@
             @Html.DisplayFor(model => model.Order.User.Address)
         </dd>
     </dl>
-    <a asp-page="./Edit" asp-route-id="@Model.Order.OrderId">Edit</a> 
 </div>
 
-@if(Model.orderComboDetails != null && Model.orderComboDetails.Count > 0){
+@if (Model.orderComboDetails != null && Model.orderComboDetails.Count > 0)
+{
     <div>
         @foreach (var item in Model.orderComboDetails)
         {
@@ -91,7 +91,7 @@
                     Quantity: @item.Quantity
                 </dd>
                 <dd class="col-sm-10">
-                    Unit price after discounted: @( ((double) item.UnitPrice)-  ((double)item.UnitPrice*item.Discount/100))
+                    Unit price after discounted: @(((double)item.UnitPrice) - ((double)item.UnitPrice * item.Discount / 100))
                 </dd>
             </dl>
         }
@@ -104,7 +104,7 @@
         {
             <dl class="row">
                 <dt class="col-sm-2">
-                    Combo @item.Product.ProductName
+                    @item.Product.ProductName
                 </dt>
                 <dd class="col-sm-10">
                     Quantity: @item.Quantity
@@ -116,4 +116,3 @@
         }
     </div>
 }
-

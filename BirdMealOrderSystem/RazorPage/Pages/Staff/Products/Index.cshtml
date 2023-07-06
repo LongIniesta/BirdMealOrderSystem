@@ -6,13 +6,25 @@
     Layout = "LayoutStaff";
 }
 
-<h1>Index</h1>
+<h1 class="text-center mt-5 mb-5">PRODUCT MANAGEMENT</h1>
+<form method="post">
+    <input type="text" name="strsearch" />
+    <input type="submit" name="search" />
+    <div class="form-group">
+        @for (var i = 0; i < Model.listCategory.Count; i++)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="item-@i" name="selectedItems" value="@Model.listCategory[i].CategoryId">
+                <label class="form-check-label" for="item-@i">
+                    @Model.listCategory[i].CategoryName
+                </label>
+            </div>
+        }
+    </div>
+</form>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
-    <thead>
+    <thead class="table-dark">
         <tr>
             <th>
                 Image
@@ -74,11 +86,22 @@
                     @Html.DisplayFor(modelItem => item.Supplier.SupplierName)
                 </td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a>
+                            <a class="dropdown-item" asp-page="./Details" asp-route-id="@item.ProductId">Details</a>
+                            <a class="dropdown-item" asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
+                        </div>
+                    </div>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<div class="d-flex justify-content-center">
+    <button class="btn-primary rounded-pill px-4 py-2" asp-page="Create"><a asp-page="Create" style="color: #fff; text-decoration: none; font-weight: 600;">Create New</a></button>
+</div>

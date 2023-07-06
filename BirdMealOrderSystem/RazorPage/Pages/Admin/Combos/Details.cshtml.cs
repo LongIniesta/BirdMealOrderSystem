@@ -32,7 +32,7 @@ namespace RazorPage.Pages.Admin.Combos
             }
 
             Combo = comboRepository.GetById((int)id);
-            orderComboDetails = orderComboDetailRepository.GetAll().Where(i => i.ComboId == (int)id).ToList();
+            orderComboDetails = orderComboDetailRepository.GetAll().Where(i => i.ComboId == (int)id && i.Feedback != null && !i.Feedback.Equals("notfeedback")).ToList();
             ComboDetails = new List<ComboDetail>();
             foreach (ComboDetail cbd in Combo.ComboDetails.ToList())
             {

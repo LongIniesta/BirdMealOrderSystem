@@ -48,10 +48,18 @@ namespace RazorPage.Pages
             {
                 return RedirectToPage("Staff/Products/Index");
             }
+            if (SessionHelper.checkPermission(HttpContext.Session, "customer"))
+            {
+                return RedirectToPage("Customer/MyOrder");
+            }
             return Page();
         }
         public async Task<IActionResult> OnPostAsync()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
             if (LoginDTOInfor == null) return Page();
 
             if (LoginDTOInfor.phone.Equals(Configuration["AdminAccount:Phone"]) &&
@@ -72,6 +80,10 @@ namespace RazorPage.Pages
                     if (user.Role.Equals("staff"))
                     {
                         return RedirectToPage("Staff/Products/Index");
+                    }
+                    if (user.Role.Equals("customer"))
+                    {
+                        return RedirectToPage("ShoppingProduct");
                     }
                     return Page();
                 }

@@ -37,7 +37,7 @@ namespace RazorPage.Pages.Admin.Users
 
        
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public IActionResult OnGet(int? id)
         {
             if (!SessionHelper.checkPermission(HttpContext.Session, "admin"))
             {

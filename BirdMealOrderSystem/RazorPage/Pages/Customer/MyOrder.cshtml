@@ -1,0 +1,88 @@
+﻿@page
+@model RazorPage.Pages.Customer.MyOrderModel
+@{
+    Layout = "LayoutCustomer";
+}
+
+<h1>Report</h1>
+
+<form method="post" asp-page-handler="generate">
+    <div class="form-group">
+        <label class="control-label">Order date from</label>
+        <input asp-for="orderStart" class="form-control" />
+        <span asp-validation-for="orderStart" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">To</label>
+        <input asp-for="orderEnd" class="form-control" />
+        <span asp-validation-for="orderStart" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Number of order:</label>
+        <h4>@Model.numberOfOrder</h4>
+        <lable>Total:</lable>
+        <h4>@Model.Total</h4>
+
+    </div>
+    <div><button class="btn-outline-primary" type="submit">Generate</button></div>
+    <div><span class="text-danger">@Model.Message</span></div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].OrderStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].OrdeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].ShippedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].ShipAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Paymentmethod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].PaymentStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Order)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrdeDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paymentmethod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentStatus)
+                </td>
+                <td>
+                    <a asp-page="./MyOrderDetail" asp-route-id="@item.OrderId">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

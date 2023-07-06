@@ -12,14 +12,15 @@ namespace DTO
         {
         }
 
-        string type { get; set; }
-        int ItemId { get; set; }
+        public string type { get; set; }
+        public int ItemId { get; set; }
 
-        int quantity { get; set; }
+        public  int quantity { get; set; }
 
-        decimal unitPirce { get; set; }
-        double discount { get; set; }
-        string imgLink { get; set; }
+        public decimal unitPirce { get; set; }
+        public double discount { get; set; }
+        public string imgLink { get; set; }
+        public string name { get; set; }
         
     }
 }

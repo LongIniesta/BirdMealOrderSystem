@@ -25,5 +25,22 @@ namespace RazorPage.Pages.Staff.Combos
             Combo.AddRange(comboRepository.GetAll(false));
             return Page();
         }
+        public IActionResult OnPost(string? strsearch)
+        {
+            if (!SessionHelper.checkPermission(HttpContext.Session, "staff"))
+            {
+                return Redirect("~/ErrorRole");
+            }
+            if (strsearch == null)
+            {
+                strsearch = "";
+            }
+            else
+            {
+                strsearch = strsearch.ToLower();
+            }
+            Combo = comboRepository.GetAll(true).Where(o => o.ComboName.ToLower().Contains(strsearch)).ToList();
+            return Page();
+        }
     }
 }

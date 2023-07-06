@@ -28,7 +28,7 @@ namespace RazorPage.Pages.Admin.Products
                 return NotFound();
             }
 
-            listOrderProductDetai = productDetailRepository.GetAll().Where(i => i.ProductId == (int)id).ToList();
+            listOrderProductDetai = productDetailRepository.GetAll().Where(i => i.ProductId == (int)id && i.Feedback != null && !i.Feedback.Equals("notfeedback")).ToList();
             Product = productRepository.GetById((int) id);
 
             if (Product == null)

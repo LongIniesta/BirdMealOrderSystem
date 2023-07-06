@@ -1,0 +1,38 @@
+﻿@page
+@model RazorPage.Pages.ShoppingComboModel
+@{
+    if (SessionHelper.checkPermission(HttpContext.Session, "customer"))
+    {
+        Layout = "LayoutCustomer";
+    }
+}
+<h3>Combo Shopping</h3>
+<form method="post">
+    <input type="text" name="strsearch" />
+    <input type="submit" name="search" />
+</form>
+<table border="1">
+    <tr>
+        <th>Combo</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Description</th>
+        <th>Price after discounted</th>
+    </tr>
+    @foreach (var combo in Model.Combo)
+    {
+        <tr align="center">
+            <td>@combo.ComboName</td>
+            <td>@combo.Price</td>
+            <td>@combo.Discount (%)</td>
+            <td>@combo.ComboDescription</td>
+            <td>@((double)combo.Price - (((double)combo.Price) * combo.Discount / 100))</td>
+            <td>
+                <a asp-page="./Customer/CustomerCart" asp-page-handler="BuyNow" asp-route-id="@combo.ComboId" asp-route-type="combo">Add to cart</a>
+            </td>
+            <td>
+                <a asp-page="./ComboDetailView" asp-route-id="@combo.ComboId">View detail</a> |
+            </td>
+        </tr>
+    }
+</table>

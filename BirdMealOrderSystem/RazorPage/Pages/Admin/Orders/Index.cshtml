@@ -64,41 +64,46 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
-@foreach (var item in Model.Order) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Total)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderStatus)
-            </td>
-            <td>
-                    @{
-                        DateTime orderDate = (DateTime)item.OrdeDate;
-                        string formatDate = orderDate.ToString("dd/MM/yyyy");
-                    }
-                    <span>@formatDate</span>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShippedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShipAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Paymentmethod)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PaymentStatus)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.UserName)
-            </td>
-            <td>
-                <a asp-page="./Details" asp-route-id="@item.OrderId">Details</a>
-            </td>
-        </tr>
-}
-    </tbody>
+    @if (Model.Order != null)
+    {
+        <tbody>
+            @foreach (var item in Model.Order)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Total)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderStatus)
+                    </td>
+                    <td>
+                        @{
+                            DateTime orderDate = (DateTime)item.OrdeDate;
+                            string formatDate = orderDate.ToString("dd/MM/yyyy");
+                        }
+                        <span>@formatDate</span>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShippedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShipAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Paymentmethod)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PaymentStatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.UserName)
+                    </td>
+                    <td>
+                        <a asp-page="./Details" asp-route-id="@item.OrderId">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    }
+    
 </table>

@@ -22,6 +22,10 @@ namespace RazorPage.Pages.Staff.Orders
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            if (!SessionHelper.checkPermission(HttpContext.Session, "staff"))
+            {
+                return Redirect("~/ErrorRole");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -34,9 +38,30 @@ namespace RazorPage.Pages.Staff.Orders
                 return NotFound();
             }
             List<string> listStatus = new List<string>();
-            listStatus.Add("Ready");
-            listStatus.Add("Shipping");
-            listStatus.Add("Shipped");
+            if (!Order.OrderStatus.Equals("cancled"))
+            {
+                listStatus.Add("cancled");
+                listStatus.Add("ready");
+                listStatus.Add("shipping");
+                listStatus.Add("shipped");
+            } else
+            {
+                listStatus.Add("cancled");
+            }
+
+            List<string> listPayment = new List<string>();
+            if (!Order.PaymentStatus.ToLower().Equals("done"))
+            {
+                listPayment.Add("done");
+                listPayment.Add("not yet");
+            }else
+            {
+                listPayment.Add("done");
+            }
+            ViewData["payment"] = new SelectList(listPayment);
+
+            
+            
             ViewData["status"] = new SelectList(listStatus);
             return Page();
         }
@@ -46,14 +71,36 @@ namespace RazorPage.Pages.Staff.Orders
         public async Task<IActionResult> OnPostAsync()
         {
 
-            
+            if (!SessionHelper.checkPermission(HttpContext.Session, "staff"))
+            {
+                return Redirect("~/ErrorRole");
+            }
             if (!ModelState.IsValid)
             {
                 Order = orderRepository.GetById((int)Order.OrderId);
                 List<string> listStatus = new List<string>();
-                listStatus.Add("Ready");
-                listStatus.Add("Shipping");
-                listStatus.Add("Shipped");
+                if (!Order.OrderStatus.Equals("cancled"))
+                {
+                    listStatus.Add("cancled");
+                    listStatus.Add("ready");
+                    listStatus.Add("shipping");
+                    listStatus.Add("shipped");
+                }
+                else
+                {
+                    listStatus.Add("cancled");
+                }
+                List<string> listPayment = new List<string>();
+                if (!Order.PaymentStatus.ToLower().Equals("done"))
+                {
+                    listPayment.Add("done");
+                    listPayment.Add("not yet");
+                }
+                else
+                {
+                    listPayment.Add("done");
+                }
+                ViewData["payment"] = new SelectList(listPayment);
                 ViewData["status"] = new SelectList(listStatus);
                 return Page();
             }
@@ -69,9 +116,28 @@ namespace RazorPage.Pages.Staff.Orders
                     {
                         Order = orderRepository.GetById((int)Order.OrderId);
                         List<string> listStatus = new List<string>();
-                        listStatus.Add("Ready");
-                        listStatus.Add("Shipping");
-                        listStatus.Add("Shipped");
+                        if (!Order.OrderStatus.Equals("cancled"))
+                        {
+                            listStatus.Add("cancled");
+                            listStatus.Add("ready");
+                            listStatus.Add("shipping");
+                            listStatus.Add("shipped");
+                        }
+                        else
+                        {
+                            listStatus.Add("cancled");
+                        }
+                        List<string> listPayment = new List<string>();
+                        if (!Order.PaymentStatus.ToLower().Equals("done"))
+                        {
+                            listPayment.Add("done");
+                            listPayment.Add("not yet");
+                        }
+                        else
+                        {
+                            listPayment.Add("done");
+                        }
+                        ViewData["payment"] = new SelectList(listPayment);
                         ViewData["status"] = new SelectList(listStatus);
                         Message = "Shipped date invalid!";
                         return Page();

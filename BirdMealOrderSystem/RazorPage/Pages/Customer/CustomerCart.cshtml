@@ -1,0 +1,79 @@
+﻿@page
+@model RazorPage.Pages.Customer.CustomerCartModel
+@{
+    Layout = "LayoutCustomer";
+}
+
+@if (Model.cart != null && Model.cart.Count > 0)
+{
+    <h3>Cart</h3>
+    <form method="post" asp-page="customerCart" asp-page-handler="update">
+        <table border="1">
+            <tr>
+                <th>Image</th>
+                <th>Action</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Discount(%)</th>
+                <th>Sub Total</th>
+            </tr>
+            @foreach (var item in Model.cart)
+            {
+                <tr align="center">
+                    <td><img src="~/uploads/@item.imgLink" width="120" height="100" /></td>
+                    <td align="center">
+                        <a asp-page="customerCart" asp-page-handler="delete" asp-route-id="@item.ItemId" asp-route-type="@item.type">X</a>
+                    </td>
+                    <td>@item.name</td>
+                    <td>@item.unitPirce</td>
+                    <td><input type="number" name="quantities" value="@item.quantity" min="1" style="width: 50px;" /></td>
+                    <td>@item.discount</td>
+                    <td>
+                        $@((double)item.unitPirce * item.quantity - (double)(item.unitPirce * item.quantity)*item.discount/100)
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="6" align="right">Total</td>
+                <td align="center">$@Model.Total</td>
+            </tr>
+        </table>
+        <input type="submit" value="Update" />
+    </form>
+    <form method="post" asp-page="customerCart" asp-page-handler="submit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label class="control-label">Ship address</label>
+            <input type="text" asp-for="@Model.Shippaddress" name="shippaddress" class="input-new" />
+            <span asp-validation-for="@Model.Shippaddress" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Payment method</label>
+            <select name="paymentMethod" class="form-control" asp-items="ViewBag.payment"></select>
+        </div>
+        <div>
+            <h4 class="text-danger">@Model.Message</h4>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" />
+        </div>
+    </form>
+    <a href="~/ShoppingProduct">Add product</a>
+    <a href="~/ShoppingCombo">Add combo</a>
+}
+else
+{
+    <h1>Cart is empty</h1>
+    <a href="~/ShoppingProduct">Add product</a>
+    <a href="~/ShoppingCombo">Add combo</a>
+}
+<div>
+    <a href="~/Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

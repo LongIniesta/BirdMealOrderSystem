@@ -9493,23 +9493,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\baolo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
+      "projectUniqueName": "D:\\PRN221\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
       "projectName": "RazorPage",
-      "projectPath": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\RazorPage\\obj\\",
+      "projectPath": "D:\\PRN221\\BirdMealOrderSystem\\RazorPage\\RazorPage.csproj",
+      "packagesPath": "C:\\Users\\baolo\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN221\\BirdMealOrderSystem\\RazorPage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\baolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9524,14 +9524,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
-              "projectPath": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj"
+            "D:\\PRN221\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj": {
+              "projectPath": "D:\\PRN221\\BirdMealOrderSystem\\BussinessObject\\BussinessObject.csproj"
             },
-            "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\DTO\\DTO.csproj": {
-              "projectPath": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\DTO\\DTO.csproj"
+            "D:\\PRN221\\BirdMealOrderSystem\\DTO\\DTO.csproj": {
+              "projectPath": "D:\\PRN221\\BirdMealOrderSystem\\DTO\\DTO.csproj"
             },
-            "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\Repository\\Repository.csproj": {
-              "projectPath": "E:\\Tailieu\\Ki7\\PRN221\\group\\BirdMealOrderSystem\\BirdMealOrderSystem\\Repository\\Repository.csproj"
+            "D:\\PRN221\\BirdMealOrderSystem\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\PRN221\\BirdMealOrderSystem\\Repository\\Repository.csproj"
             }
           }
         }
@@ -9586,6 +9586,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9594,7 +9600,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

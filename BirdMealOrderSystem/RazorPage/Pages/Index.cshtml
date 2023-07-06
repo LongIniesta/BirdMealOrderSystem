@@ -4,44 +4,11 @@
     ViewData["Title"] = "Home page";
 }
 
-<link rel="stylesheet" type="text/css" href="css/login.css" />
+<link rel="stylesheet" href="~/css/long.css" />
 <section class="sct-custom">
     <div class="container-new" id="container-new">
         <div class="form-container-new sign-up-container-new">
-            <form class="form-new" action="#">
-                <h1 class="h1-custom">Create Account</h1>
-                <span class="span-custom">or use your email for registration</span>
-                <div>
-                    <input class="input-new" type="text" placeholder="Name" />
-                    <span class="text-danger"></span>
-                </div>
-                <div>
-                    <input class="input-new" type="email" placeholder="Email" />
-                    <span class="text-danger"></span>
-                </div>
-                <div>
-                    <input class="input-new" type="text" placeholder="Phone number" />
-                    <span class="text-danger"></span>
-                </div>
-                <div>
-                    <input class="input-new" type="password" placeholder="Password" />
-                    <span class="text-danger"></span>
-                </div>
-                <div>
-                    <input class="input-new" type="password" placeholder="Confirm password" />
-                    <span class="text-danger"></span>
-                </div>
-                <div>
-                    <input class="input-new" type="text" placeholder="Address" />
-                    <span class="text-danger"></span>
-                </div>
-                <div>
-                    <input class="input-new" type="date" placeholder="Birthday" />
-                    <span class="text-danger"></span>
-                </div>
-                <span class="text-danger">@Model.Message</span>
-                <button class="btn-custom" type="submit">Sign Up</button>
-            </form>
+                <a class="btn-custom" href="/Register">Sign Up</a>
         </div>
         <div class="form-container-new sign-in-container-new">
             <form class="form-new" method="post">
@@ -75,23 +42,9 @@
                 <div class="overlay-panel overlay-right">
                     <h1 class="h1-custom">Hello, Friend!</h1>
                     <p class="p-custom">Your Bird, My Bird!</p>
-                    <button class="btn-custom ghost" id="signUp">Sign Up</button>
+                    <a class="btn-custom ghost" href="/Register">Sign Up</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<script>
-    const signUpButton = document.getElementById("signUp");
-    const signInButton = document.getElementById("signIn");
-    const container = document.getElementById("container-new");
-
-    signUpButton.addEventListener("click", () => {
-        container.classList.add("right-panel-active");
-    });
-
-    signInButton.addEventListener("click", () => {
-        container.classList.remove("right-panel-active");
-    });
-</script>

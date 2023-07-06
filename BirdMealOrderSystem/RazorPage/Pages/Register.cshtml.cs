@@ -70,14 +70,14 @@ namespace RazorPage.Pages
         {
             Configuration = configuration;
         }
-        public void OnPost()
+        public IActionResult OnPost()
         {
-
             if (ModelState.IsValid)
-                Register();
+                return Register();
+            else return Page();
         }
 
-        private void Register()
+        private IActionResult Register()
         {
             User user = new User();
             user.UserName = registerInfo.Name;
@@ -91,17 +91,17 @@ namespace RazorPage.Pages
             if (registerInfo.Birthday.AddYears(16) > DateTime.Now)
             {
                 Message = "You must be more 16 year old to use!";
-                return;
+                return Page();
             }
             try
             {
                 userRepository.Create(user);
-                Message = "Register success, please login";
+                return RedirectToPage("Index");
             }
             catch (Exception ex)
             {
                 Message = "System Error";
-                return;
+                return Page();
             }
         }
     }
