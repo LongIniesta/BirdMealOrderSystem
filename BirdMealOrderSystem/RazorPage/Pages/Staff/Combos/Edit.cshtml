@@ -6,12 +6,25 @@
     Layout = "LayoutStaff";
 }
 
-<h1>Edit</h1>
-
-<h4>Combo</h4>
+<div class="d-flex justify-content-between">
+    <a asp-page="./Index">
+        <img src="~/images/back-icon-3.png" style="padding-left: 30px;" />
+    </a>
+    <div>
+    </div>
+    <div>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <span class="mx-2 span-custom"><a style="font-weight: 500; color: #5A5A5A; text-decoration: none;" asp-page="./Index">Combos</a></span>
+    <span> / </span>
+    <span class="mx-2" style="font-weight: 500; color: #000;">Edit</span>
+</div>
+<h1 class="text-center mt-5 mb-5">EDIT COMBO</h1>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin: 0 200px 0 200px;">
+    <div class="padding: 30px 30px 30px 30px;">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Combo.ComboId" />
@@ -37,15 +50,19 @@
                 <input asp-for="Combo.ComboDescription" class="form-control" />
                 <span asp-validation-for="Combo.ComboDescription" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="d-flex justify-content-center">
+                <div class="form-group">
+                    <input type="submit" value="Save" class="shadow rounded" style="width: 200px; height: 35px; border: solid 2px #0044e6; border-radius: 15px; color: #fff; font-weight: 600; background: #0044e6;" />
+                </div>
             </div>
             <h4 class="text-danger">@Model.Message</h4>
         </form>
     </div>
 </div>
-<h3>Combo details:</h3>
-<div>
+<hr />
+
+<div class="card shadow p-3 mb-5 bg-white rounded" style="margin: 0 20px 0 20px;">
+    <h3 class="text-center">Combo details:</h3>
     @foreach (var item in Model.ComboDetails)
     {
         <dl class="row">
@@ -65,9 +82,7 @@
     }
 </div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{

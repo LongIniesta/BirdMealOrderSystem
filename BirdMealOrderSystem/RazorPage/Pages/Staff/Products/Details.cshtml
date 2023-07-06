@@ -100,7 +100,9 @@
             @Html.DisplayFor(model => model.Product.Supplier.SupplierName)
         </dd>
     </dl>
-    <a asp-page="./Edit" asp-route-id="@Model.Product.ProductId">Edit</a>
+    <div class="d-flex justify-content-center">
+        <button class="btn-primary rounded-pill px-4 py-2"><a asp-page="./Edit" asp-route-id="@Model.Product.ProductId" style="color: #fff; text-decoration: none; font-weight: 600;">Edit</a></button>
+    </div>
 </div>
 
 <div>
